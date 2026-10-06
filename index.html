@@ -55,8 +55,14 @@ details[open]>summary::after{transform:rotate(-135deg)}
 .panel>p+p{margin-top:.9rem}
 
 /* Initiatives */
-.init{display:grid;gap:1rem;margin-top:.25rem}
-.item{border-left:4px solid var(--gold);background:var(--paper);border-radius:0 10px 10px 0;padding:1.1rem 1.25rem}
+.init{display:grid;gap:1.1rem;margin-top:.25rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.item{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-top:5px solid var(--gold);border-radius:14px;padding:1.4rem 1.4rem 1.3rem;box-shadow:0 10px 24px -18px rgba(7,61,39,.55);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.item:hover,.item:focus-within{transform:translateY(-6px);box-shadow:0 22px 36px -18px rgba(7,61,39,.55);border-color:var(--green);border-top-color:var(--green)}
+.item .role-tag{align-self:flex-start}
+.item .go{margin-top:auto;padding-top:.9rem}
+.item .barrier{padding-bottom:.2rem}
+.golinks{margin-top:auto;padding-top:.9rem;display:flex;flex-wrap:wrap;gap:.4rem 1.3rem}
+.item .golinks .go{margin:0;padding:0}
 .item h3{font-family:var(--display);font-size:1.15rem;line-height:1.3}
 .item .role-tag{display:inline-block;font-size:.82rem;font-weight:600;color:var(--green-deep);background:var(--tint);border-radius:999px;padding:.1rem .7rem;margin:.35rem 0 .5rem}
 .item p{color:var(--muted);font-size:.97rem}
@@ -66,17 +72,18 @@ details[open]>summary::after{transform:rotate(-135deg)}
 .go:hover{color:var(--green-deep)}
 
 /* Nested resource groups */
-.panel details{background:var(--paper);border-radius:10px;margin-bottom:.7rem}
-.panel details summary{padding:.9rem 1.1rem}
-.panel details summary h3{font-family:var(--display);font-size:1.05rem;flex:1;line-height:1.3}
-.panel details summary em{font-style:normal;font-size:.82rem;color:var(--muted);white-space:nowrap}
-.links{list-style:none;padding:0 1.1rem 1.1rem;display:grid;gap:.5rem}
+.sechead{margin:2.2rem 0 1rem}
+.sechead h2{font-family:var(--display);font-weight:800;font-size:clamp(1.5rem,4vw,1.9rem);line-height:1.2;letter-spacing:-.01em}
+.sechead p{color:var(--muted);margin-top:.2rem}
+summary h3{font-family:var(--display);font-weight:700;font-size:1.2rem;line-height:1.25;flex:1}
+summary em{font-style:normal;font-size:.85rem;color:var(--muted);white-space:nowrap}
+.links{list-style:none;padding:0 1.35rem 1.4rem;display:grid;gap:.5rem}
 .links a{display:block;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:.7rem 1rem;text-decoration:none;font-weight:500;font-size:.95rem}
 .links a:hover{border-color:var(--green);background:var(--tint);color:var(--green-deep)}
 
 footer{text-align:center;color:var(--muted);font-size:.9rem;padding:2rem 1rem 3rem}
-@media(max-width:560px){.panel details summary em{display:none}}
-@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media(max-width:560px){summary em{display:none}}
+@media(prefers-reduced-motion:reduce){.item:hover,.item:focus-within{transform:none}*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
@@ -93,10 +100,10 @@ footer{text-align:center;color:var(--muted);font-size:.9rem;padding:2rem 1rem 3r
 <main class="wrap">
 
   <section class="impact" aria-label="Impact at a glance">
-    <div><strong>6,700+</strong><span>People reached across free communities</span></div>
+    <div><strong>7,500+</strong><span>People reached across free communities</span></div>
     <div><strong>6+ years</strong><span>Of consistent leadership since 2019</span></div>
     <div><strong>4</strong><span>Communities built or co-run</span></div>
-    <div><strong>30+</strong><span>Free guides and technical projects</span></div>
+    <div><strong>40+</strong><span>Free guides, tutorials and videos</span></div>
   </section>
 
   <div class="bar">
@@ -125,21 +132,21 @@ footer{text-align:center;color:var(--muted);font-size:.9rem;padding:2rem 1rem 3r
         </article>
         <article class="item">
           <h3>App Fee Waiver Community</h3>
-          <span class="role-tag">Co-administrator · 1,000+ members</span>
-          <p>A global community helping students secure university admissions, application fee waivers and fully funded scholarships.</p>
+          <span class="role-tag">Co-administrator · 1,490+ members</span>
+          <p>A global community across two groups helping students secure university admissions, application fee waivers and fully funded scholarships, with free templates and scholarship guides on its website.</p>
           <p class="barrier"><b>Barrier removed:</b> application fees that stop strong candidates before they start.</p>
-          <a class="go" href="https://chat.whatsapp.com/HcH3Ckgwa2SINLKYuuUMhF" target="_blank" rel="noopener noreferrer">Join the community</a>
+          <div class="golinks"><a class="go" href="https://www.appfeewaiver.com" target="_blank" rel="noopener noreferrer">Visit the website</a><a class="go" href="https://chat.whatsapp.com/HcH3Ckgwa2SINLKYuuUMhF" target="_blank" rel="noopener noreferrer">Join the community</a></div>
         </article>
         <article class="item">
           <h3>Future Forge [F²]</h3>
-          <span class="role-tag">Movement</span>
+          <span class="role-tag">Movement · 181 members</span>
           <p>Exposes African youths to self-discovery, creative potential, and networking with visionary technocrats.</p>
           <p class="barrier"><b>Barrier removed:</b> having no mentors or networks in rooms where decisions are made.</p>
           <a class="go" href="https://chat.whatsapp.com/L0qB93kHLI4Dy4vkUxBiWS" target="_blank" rel="noopener noreferrer">Join the movement</a>
         </article>
         <article class="item">
           <h3>True Scholars Research Circle</h3>
-          <span class="role-tag">Academic hub</span>
+          <span class="role-tag">Academic hub · 225 members</span>
           <p>A collaborative group where we guide and help youths develop research capabilities and skills, building research culture and academic rigor with structured guidance on tools like Elsevier and Purdue OWL.</p>
           <p class="barrier"><b>Barrier removed:</b> limited access to structured training for building research skills.</p>
           <a class="go" href="https://chat.whatsapp.com/Gy7VP3W1J3qAqQYa38xGN7" target="_blank" rel="noopener noreferrer">Join the circle</a>
@@ -148,11 +155,12 @@ footer{text-align:center;color:var(--muted);font-size:.9rem;padding:2rem 1rem 3r
     </div>
   </details>
 
-  <details>
-    <summary><h2>Thought leadership &amp; community education<small>Articles, guides and tutorials written to open doors for others</small></h2></summary>
-    <div class="panel">
+  <div class="sechead">
+    <h2>Thought leadership &amp; community education</h2>
+    <p>Articles, guides and tutorials written to open doors for others.</p>
+  </div>
 
-      <details>
+  <details>
         <summary><h3>Youth development and career thought leadership</h3><em>7 articles</em></summary>
         <ul class="links">
           <li><a href="https://bit.ly/3TUxIr5" target="_blank" rel="noopener noreferrer">How to Kickstart Your Tech Journey</a></li>
@@ -205,8 +213,31 @@ footer{text-align:center;color:var(--muted);font-size:.9rem;padding:2rem 1rem 3r
         </ul>
       </details>
 
-    </div>
-  </details>
+  <details>
+        <summary><h3>Video guides: scholarships and credentials</h3><em>2 videos</em></summary>
+        <ul class="links">
+          <li><a href="https://youtu.be/Nyk844_1IzI" target="_blank" rel="noopener noreferrer">How To Win the Linux Foundation (LiFT) Scholarship</a></li>
+          <li><a href="https://www.youtube.com/watch?v=AK47QR6xuyo" target="_blank" rel="noopener noreferrer">How To Merge Your Credly Accounts</a></li>
+        </ul>
+      </details>
+
+  <details>
+        <summary><h3>Video training: cloud and enterprise skills</h3><em>12 videos</em></summary>
+        <ul class="links">
+          <li><a href="https://www.youtube.com/watch?v=Cq_2g7V5pOc" target="_blank" rel="noopener noreferrer">Sentiment Analysis with Azure AI Language Services</a></li>
+          <li><a href="https://www.youtube.com/watch?v=qail9o0DAyY" target="_blank" rel="noopener noreferrer">Deploy Azure Kubernetes Service (AKS) with REST API Using Postman</a></li>
+          <li><a href="https://www.youtube.com/watch?v=1SruvEwS_l0" target="_blank" rel="noopener noreferrer">Deploy Azure Virtual Machine Using Postman REST API</a></li>
+          <li><a href="https://www.youtube.com/watch?v=Q1j5ri_y1xM" target="_blank" rel="noopener noreferrer">Deploy AWS Elastic Kubernetes Service (EKS) Using Terraform Modules</a></li>
+          <li><a href="https://www.youtube.com/watch?v=1-BSF3pcjZA" target="_blank" rel="noopener noreferrer">Infrastructure as Code (IaC) Testing Using Terraform Test for EKS Deployment Validation</a></li>
+          <li><a href="https://www.youtube.com/watch?v=fFognFac1hA" target="_blank" rel="noopener noreferrer">Deploy AWS ALB Controller and Set Up OIDC Provider and IRSA</a></li>
+          <li><a href="https://www.youtube.com/watch?v=SDEHe3O3C_M" target="_blank" rel="noopener noreferrer">Introduction to D365 Finance &amp; Operations Environment and Performance Monitoring Tools in LCS</a></li>
+          <li><a href="https://www.youtube.com/watch?v=79T54R_69rg" target="_blank" rel="noopener noreferrer">Dynamics 365 Finance and Operations: ERP Training, Part 1</a></li>
+          <li><a href="https://www.youtube.com/watch?v=K7EKRHw-vdU" target="_blank" rel="noopener noreferrer">Dynamics 365 Finance and Operations: ERP Training, Part 2</a></li>
+          <li><a href="https://www.youtube.com/watch?v=Csj9FkpyKfE" target="_blank" rel="noopener noreferrer">Dynamics 365 Finance and Operations: ERP Training, Part 3</a></li>
+          <li><a href="https://www.youtube.com/watch?v=-ZzHuSxgQHs" target="_blank" rel="noopener noreferrer">Dynamics 365 Finance and Operations: ERP Training, Part 4</a></li>
+          <li><a href="https://www.youtube.com/watch?v=xe4dtnvNKAA" target="_blank" rel="noopener noreferrer">Dynamics 365 Finance and Operations: ERP Training, Part 5</a></li>
+        </ul>
+      </details>
 
 </main>
 
