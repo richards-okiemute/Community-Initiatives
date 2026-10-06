@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richards Okiemute | Impact & Community Leadership Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --background: #f8fafc;
+            --surface: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --radius: 12px;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            --transition: all 0.25s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Header / Hero Section */
+        header {
+            background: var(--surface);
+            padding: 3rem 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            margin-bottom: 2.5rem;
+            border: 1px solid var(--border);
+        }
+
+        header h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        header .subtitle {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.15rem;
+            letter-spacing: 0.02em;
+        }
+
+        header .quote {
+            font-style: italic;
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            line-height: 1.7;
+        }
+
+        /* Section Styling */
+        section {
+            background: var(--surface);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            border: 1px solid var(--border);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-bottom: 2px solid var(--background);
+            padding-bottom: 0.75rem;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        /* Grid Cards for Initiatives */
+        .initiatives-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media(min-width: 768px) {
+            .initiatives-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .card {
+            background: var(--background);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            border-color: var(--primary);
+        }
+
+        .card .badge {
+            display: inline-block;
+            background: #dbeafe;
+            color: var(--primary);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            margin-bottom: 0.75rem;
+            align-self: flex-start;
+        }
+
+        .card-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .card-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Links Lists */
+        .category-group {
+            margin-bottom: 2rem;
+        }
+
+        .category-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .category-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        ul.links-list {
+            list-style: none;
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        ul.links-list li a {
+            display: block;
+            background: var(--background);
+            padding: 0.85rem 1.25rem;
+            border-radius: 8px;
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        ul.links-list li a:hover {
+            background: #eff6ff;
+            color: var(--primary);
+            border-color: #bfdbfe;
+            padding-left: 1.5rem;
+        }
+
+        /* Impact Summary Stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        @media(min-width: 640px) {
+            .stats-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .stat-box {
+            background: var(--background);
+            padding: 1.25rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Richards Okiemute</h1>
+            <p class="subtitle">Energy Systems | Digital Innovation | Youth Ecosystem Builder</p>
+            <p class="quote">"For over six years (since 2019), my life’s work has been dedicated to building digital ecosystems that bridge the opportunity gap for African youths—shifting them fro[...]
+        </header>
+
+        <!-- About Section -->
+        <section>
+            <h2>🌟 Overview</h2>
+            <p>Welcome to my impact portfolio. Over the years, I have committed myself to addressing systemic barriers in education and technological access. Through structured communities, open-acces[...]
+        </section>
+
+        <!-- Ecosystem & Community Initiatives -->
+        <section>
+            <h2>🚀 Ecosystem & Community Initiatives</h2>
+            <div class="initiatives-grid">
+                <div class="card">
+                    <div>
+                        <span class="badge">Primary Ecosystem</span>
+                        <h3>Scholarship & Tech Center</h3>
+                        <p>A WhatsApp channel ecosystem with <strong>5,700+ followers</strong> providing live updates on global scholarships, fellowships, tech courses, and SOP writing resources[cite:[...]</p>
+                    </div>
+                    <a href="https://whatsapp.com/channel/0029Vb32yR32UPBIbILGsG0u" target="_blank" class="card-link">View Channel &rarr;</a>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <span class="badge">Co-Administration</span>
+                        <h3>App Fee Waiver Community</h3>
+                        <p>Co-administering a global community of <strong>1,000+ members</strong> helping students secure university admissions, application fee waivers, and fully funded scholarships.[...]</p>
+                    </div>
+                    <a href="https://chat.whatsapp.com/HcH3Ckgwa2SINLKYuuUMhF" target="_blank" class="card-link">View Community &rarr;</a>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <span class="badge">Movement</span>
+                        <h3>Future Forge [F²]</h3>
+                        <p>An initiative focused on exposing African youths to self-discovery, creative potential, and networking with visionary technocrats.</p>
+                    </div>
+                    <a href="https://chat.whatsapp.com/L0qB93kHLI4Dy4vkUxBiWS" target="_blank" class="card-link">Join Movement &rarr;</a>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <span class="badge">Academic Hub</span>
+                        <h3>True Scholars Research Circle</h3>
+                        <p>A collaborative group fostering research culture, academic rigor, and structured guidance on tools like Elsevier and Purdue OWL.</p>
+                    </div>
+                    <a href="https://chat.whatsapp.com/Gy7VP3W1J3qAqQYa38xGN7" target="_blank" class="card-link">Join Circle &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications & Resources -->
+        <section>
+            <h2>📚 Publications & Open Educational Resources</h2>
+
+            <!-- Part 1 -->
+            <div class="category-group">
+                <div class="category-title">Thought Leadership & Youth Development Articles</div>
+                <ul class="links-list">
+                    <li><a href="https://bit.ly/3TUxIr5" target="_blank">How to Kickstart Your Tech Journey</a></li>
+                    <li><a href="https://bit.ly/3bKkkEa" target="_blank">IMPORTANT SKILLS YOU MUST DEVELOP TO KEEP MOVING AHEAD</a></li>
+                    <li><a href="https://bit.ly/3xw2OdB" target="_blank">The Art of Writing Powerful and Persuasive Financial Aids for Tech Courses</a></li>
+                    <li><a href="bit.ly/3zyDrLg" target="_blank">How to Choose the Right Online Tech Courses for Your Self Development</a></li>
+                    <li><a href="https://bit.ly/3Qejcse" target="_blank">Tech Fields With Little or No Codes</a></li>
+                    <li><a href="https://bit.ly/3Obp6Iy" target="_blank">Break Your Excuses For Not Developing Yourself Consistently</a></li>
+                    <li><a href="https://bit.ly/3O84otb" target="_blank">Why You Should Get into Information Technology (Tech) Now</a></li>
+                </ul>
+            </div>
+
+            <!-- Part 2 -->
+            <div class="category-group">
+                <div class="category-title">Certifications, Free Resources & Fast-Tracking Exams</div>
+                <ul class="links-list">
+                    <li><a href="https://bit.ly/3AfGbxE" target="_blank">How I Passed 3 Microsoft Azure Exams in 1 Day (and 4 exams in 4 Days)</a></li>
+                    <li><a href="https://bit.ly/3D23jgt" target="_blank">How I Passed my AWS Cloud Practitioner Exam on My First Trial</a></li>
+                    <li><a href="https://bit.ly/3MJvxBN" target="_blank">Learn, Develop, and Evolve with Microsoft Learn</a></li>
+                    <li><a href="https://bit.ly/3Qkp2IK" target="_blank">Get Certified By Microsoft For Free</a></li>
+                    <li><a href="https://bit.ly/3H2Caft" target="_blank">Boost Your Confidence and Tech Skills With Guided Projects</a></li>
+                    <li><a href="https://bit.ly/32EaAae" target="_blank">Learn to Code for Free With FreeCodeCamp</a></li>
+                    <li><a href="https://bit.ly/3fnDChn" target="_blank">Start 2022 with Free Courses from Google (Over 150 free courses)</a></li>
+                    <li><a href="https://bit.ly/3yBMSqX" target="_blank">Kickstarting and Advancing Your Tech Career with Google Certificate Programs</a></li>
+                </ul>
+            </div>
+
+            <!-- Part 3 -->
+            <div class="category-group">
+                <div class="category-title">Advanced Cloud, DevOps & Tech Tutorials</div>
+                <ul class="links-list">
+                    <li><a href="https://richards-okiemute.medium.com/building-a-serverless-genai-assistant-with-aws-bedrock-lambda-ses-and-eventbridge-89a7d887996f" target="_blank">Building a Serverl[...]</a></li>
+                    <li><a href="https://richards-okiemute.medium.com/become-the-next-aws-generative-ai-professional-developer-2793639c4f20" target="_blank">Become the Next AWS Generative AI Professio[...]</a></li>
+                    <li><a href="https://richards-okiemute.medium.com/deploying-aws-lambda-function-using-terraform-and-python-8ea9bf667bf3" target="_blank">Deploying AWS Lambda Function Using Terrafo[...]</a></li>
+                    <li><a href="https://richards-okiemute.medium.com/deploy-and-manage-aws-lambda-and-step-function-using-aws-cdk-361114b1f263" target="_blank">Deploy and Manage AWS Lambda and Step F[...]</a></li>
+                    <li><a href="https://richards-okiemute.medium.com/implementing-continuous-delivery-pipeline-with-aws-codepipeline-aws-codebuild-and-elastic-3142df84b2eb" target="_blank">Implementi[...]</a></li>
+                    <li><a href="https://richards-okiemute.medium.com/developing-a-serverless-file-encryption-app-using-aws-lambda-s3-and-aws-cli-0e85c7aa9dfd" target="_blank">Developing a Serverless [...]</a></li>
+                    <li><a href="https://richards-okiemute.medium.com/configure-and-connect-to-a-serverless-postgresql-database-with-amazon-aurora-serverless-v2-dd6d365fc540" target="_blank">Configure[...]</a></li>
+                    <li><a href="https://richards-okiemute.medium.com/deploying-a-virtual-private-cloud-vpc-for-richardscorp-using-aws-cloudformation-bb8ccae671ca" target="_blank">Deploying a Virtual [...]</a></li>
+                    <li><a href="https://richards-okiemute.medium.com/aws-microcredentials-are-now-free-bdf2e956f78c" target="_blank">AWS Microcredentials Are Now Free</a></li>
+                    <li><a href="https://bit.ly/3xG1KW8" target="_blank">The Beautiful Intersections Between Engineering and Data Analytics</a></li>
+                </ul>
+            </div>
+
+            <!-- Part 4: Data Analytics & ML Projects -->
+            <div class="category-group">
+                <div class="category-title">Data Analytics & Machine Learning Projects (Python & Spark)</div>
+                <ul class="links-list">
+                    <li><a href="https://github.com/richards-okiemute/Bellabeat-Data-Analysis-with-Python" target="_blank">Bellabeat Wellness Data Analysis with Python</a></li>
+                    <li><a href="https://github.com/richards-okiemute/911-Calls-Data-Analysis-Project-using-Python" target="_blank">Emergency 911 Calls Data Analysis & Visualization</a></li>
+                    <li><a href="https://github.com/richards-okiemute/Cyclistic-Bike-Share-Python-Data-Analytics-Project" target="_blank">Cyclistic Bike-Share User Behavior Analytics</a></li>
+                    <li><a href="https://github.com/richards-okiemute/Cars-Miles-Per-Gallon-Prediction-Using-SparkML" target="_blank">Cars Miles Per Gallon Prediction Using Apache Spark ML</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Summary of Impact -->
+        <section>
+            <h2>📈 Summary of Impact</h2>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-number">6+ Years</div>
+                    <div class="stat-label">Consistent Leadership (Since 2019)</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">6,700+</div>
+                    <div class="stat-label">Total Community Reach[cite: 1]</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">30+</div>
+                    <div class="stat-label">Published Guides & Technical Projects</div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Richards Okiemute. Built for Community Leadership & Impact.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
